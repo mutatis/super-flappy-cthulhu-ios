@@ -10,6 +10,16 @@ public class Muda : MonoBehaviour {
 	void Start () {
 		GameCenterPlatform.ShowDefaultAchievementCompletionBanner (true);
 		Social.localUser.Authenticate(Process);
+		Social.localUser.Authenticate((bool success) => {
+			if(success)
+			{
+				PlayerPrefs.SetInt("Logo", 1);
+			}
+			else
+			{
+				PlayerPrefs.SetInt("Logo", 0);
+			}
+		});
 		Application.LoadLevel ("FlappyCthulhu");
 	}
 	

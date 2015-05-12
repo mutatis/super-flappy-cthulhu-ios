@@ -12,6 +12,7 @@ public class GerenciaPokemon : MonoBehaviour
 	public GameObject[] menu;
 	public CanoPOkemon cano;
 	public MovmentMenu camera;
+	bool ok;
 	
 	// Use this for initialization
 	void Start () 
@@ -22,6 +23,26 @@ public class GerenciaPokemon : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		if(Input.GetMouseButtonDown(0) && ok == false)
+		{
+			cano.enabled = true;
+			street[1].StopCoroutine("GO");
+			cano.StopCoroutine("GO");
+			for(int i = 0; i < street.Length; i++)
+			{
+				street[i].enabled = false;
+				street[i].StopCoroutine("GO");
+			}
+			perso[1].sprite = muda[1];
+			AudioSource.PlayClipAtPoint(CthulhuSound[0], new Vector3(transform.position.x, transform.position.y, transform.position.z));
+			perso[0].sprite = muda[0];
+			cthulhu.enabled = true;
+			AudioSource.PlayClipAtPoint(CthulhuSound[1], new Vector3(transform.position.x, transform.position.y, transform.position.z));
+			camera.tem = Time.deltaTime;
+			camera.enabled = true;
+			menu[0].SetActive(true);
+			ok = true;
+		}
 	}
 	
 	IEnumerator GO()
@@ -51,5 +72,6 @@ public class GerenciaPokemon : MonoBehaviour
 		camera.tem = Time.deltaTime;
 		camera.enabled = true;
 		menu[0].SetActive(true);
+		ok = true;
 	}
 }

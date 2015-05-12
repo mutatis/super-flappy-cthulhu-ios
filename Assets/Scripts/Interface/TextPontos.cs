@@ -8,13 +8,15 @@ public class TextPontos : MonoBehaviour
 	float pon;
 	Text text;
 	float soma = 0.1f;
+	public AudioSource audios;
+	public AudioClip bate;
 
 	// Use this for initialization
 	void Start () 
 	{
-#if UNITY_IOS
+		#if UNITY_IOS
 		soma *= 2;
-#endif
+		#endif
 		text = GetComponent<Text>();
 	}
 	
@@ -26,15 +28,19 @@ public class TextPontos : MonoBehaviour
 		}
 		else
 		{
+			AudioSource.PlayClipAtPoint(bate, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+			audios.Stop();
 			pon = PlayerJump.player.pontos;
-			Social.ReportScore(PlayerJump.player.pontos, "ponto", (bool success) => {
-			
+			Social.ReportScore(PlayerPrefs.GetInt("flappyS"), "ponto", (bool success) => {
+				
 			});
 		}
 		if(Input.GetMouseButtonDown(0))
 		{
+			AudioSource.PlayClipAtPoint(bate, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+			audios.Stop();
 			pon = PlayerJump.player.pontos;
-			Social.ReportScore(PlayerJump.player.pontos, "ponto", (bool success) => {
+			Social.ReportScore(PlayerPrefs.GetInt("flappyS"), "ponto", (bool success) => {
 				
 			});
 		}

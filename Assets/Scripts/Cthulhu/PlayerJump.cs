@@ -22,6 +22,7 @@ public class PlayerJump : MonoBehaviour {
 	public Animator anim;
 	int num;
 	float rot = -0.5f;
+	bool dagon;
 
 	void Awake()
 	{
@@ -38,7 +39,6 @@ public class PlayerJump : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Debug.Log(Time.timeScale);
 		if(morreu == false)
 		{
 			if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow))
@@ -48,34 +48,31 @@ public class PlayerJump : MonoBehaviour {
 				AudioSource.PlayClipAtPoint(asa, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 				//rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
 			}
-			if(Time.timeScale != 0)
+			//transform.Translate(0.2f, 0, 0);
+			if(rigidbody2D.velocity.y < 0)
 			{
-				//transform.Translate(0.2f, 0, 0);
-				if(rigidbody2D.velocity.y < 0)
+				if(transform.eulerAngles.z <= 290 || transform.eulerAngles.z >= 300)
 				{
-					if(transform.eulerAngles.z <= 290 || transform.eulerAngles.z >= 300)
-					{
-						//transform.eulerAngles = new Vector3(0, 0, 310);
-						transform.Rotate(0, 0, rot);
-						StartCoroutine("Roda");
-					}
-					else
-					{
-						//transform.Rotate(0, 0, -5f);
-						//transform.eulerAngles = new Vector3(0, 0, 300);
-					}
+					//transform.eulerAngles = new Vector3(0, 0, 310);
+					transform.Rotate(0, 0, rot);
+					StartCoroutine("Roda");
 				}
-				else if(rigidbody2D.velocity.y > 0)
+				else
 				{
-					rot = -0.5f;
-					if(transform.eulerAngles.z <= 19)
-					{
-						transform.Rotate(0, 0, 0.5f);
-					}
-					else
-					{
-						transform.eulerAngles = new Vector3(0, 0, 19);
-					}
+					//transform.Rotate(0, 0, -5f);
+					//transform.eulerAngles = new Vector3(0, 0, 300);
+				}
+			}
+			else if(rigidbody2D.velocity.y > 0)
+			{
+				rot = -0.5f;
+				if(transform.eulerAngles.z <= 19)
+				{
+					transform.Rotate(0, 0, 0.5f);
+				}
+				else
+				{
+					transform.eulerAngles = new Vector3(0, 0, 19);
 				}
 			}
 		}
@@ -113,8 +110,9 @@ public class PlayerJump : MonoBehaviour {
 				cont = 1;
 			}
 			Time.timeScale = 1;
+			dagon = true;
 		}
-		if(collision.gameObject.tag == "Ground")
+		else if(collision.gameObject.tag == "Ground")
 		{			
 			AudioSource.PlayClipAtPoint(afogamento, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			vel = 0;
@@ -140,11 +138,31 @@ public class PlayerJump : MonoBehaviour {
 		if(other.gameObject.tag == "Ponto")
 		{
 			AudioSource.PlayClipAtPoint(point, new Vector3(transform.position.x, transform.position.y, transform.position.z));
-			pontos ++;
+			if(!morreu || !end)
+				pontos ++;
 			Destroy(other.gameObject);
 		}
-		if(other.gameObject.tag == "Enemy")
+		else if(other.gameObject.tag == "Enemy")
 		{
+			if(!dagon)
+			{
+				vel = 0;
+				AudioSource.PlayClipAtPoint(death, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+				morreu = true;
+				anim.enabled = false;
+				box.isTrigger = true;
+				transform.eulerAngles = new Vector3(0, 0, -87);
+				if(cont == 0)
+				{
+					cont = 1;
+				}
+				Time.timeScale = 1;
+				dagon = true;
+			}
+		}
+		/*if(other.gameObject.tag == "Enemy")
+		{
+			AudioSource.PlayClipAtPoint(death, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			vel = 0;
 			box.isTrigger = true;
 			morreu = true;
@@ -154,8 +172,8 @@ public class PlayerJump : MonoBehaviour {
 				cont = 1;
 			}
 			Time.timeScale = 1;
-		}
-		if(other.gameObject.tag == "Ground")
+		}*/
+		else if(other.gameObject.tag == "Ground")
 		{
 			AudioSource.PlayClipAtPoint(afogamento, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			vel = 0;
