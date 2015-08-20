@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_6_5;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_PRO_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_7;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_PRO_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -51,13 +51,16 @@
      <Compile Include="Assets\Scripts\Background\DestroyEnemy.cs" />
      <Compile Include="Assets\Scripts\Background\Inicio.cs" />
      <Compile Include="Assets\Scripts\Background\NuvemFalppy.cs" />
+     <Compile Include="Assets\Scripts\Camera\CarregandoVideo.cs" />
      <Compile Include="Assets\Scripts\Camera\Muda.cs" />
      <Compile Include="Assets\Scripts\Camera\TimeCamera.cs" />
      <Compile Include="Assets\Scripts\Cano\Cano.cs" />
      <Compile Include="Assets\Scripts\Cano\Cano1.cs" />
+     <Compile Include="Assets\Scripts\Cano\CanoDaiagonalParado.cs" />
      <Compile Include="Assets\Scripts\Cano\CanoPOkemon.cs" />
      <Compile Include="Assets\Scripts\Cano\EntradaEspecial.cs" />
      <Compile Include="Assets\Scripts\Cano\Mexe.cs" />
+     <Compile Include="Assets\Scripts\Cano\Mexecaninho.cs" />
      <Compile Include="Assets\Scripts\Cano\Saidaespecial.cs" />
      <Compile Include="Assets\Scripts\Compartilhamento\ShareFacebook.cs" />
      <Compile Include="Assets\Scripts\Criação\CreatedDagon.cs" />
@@ -73,12 +76,15 @@
      <Compile Include="Assets\Scripts\Cthulhu\PlayerJump.cs" />
      <Compile Include="Assets\Scripts\Cthulhu\SplashDeath.cs" />
      <Compile Include="Assets\Scripts\Cthulhu\StreetCthulhu.cs" />
+     <Compile Include="Assets\Scripts\Cthulhu\VideoCthulhu.cs" />
      <Compile Include="Assets\Scripts\Dagon\DagonSobe.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\Attack\Fireball.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\Attack\Raio.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\AttackElder.cs" />
+     <Compile Include="Assets\Scripts\Elder Thing\DesligaRaio.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\MoventElder.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\Segueoutro.cs" />
+     <Compile Include="Assets\Scripts\Elder Thing\elderSound.cs" />
      <Compile Include="Assets\Scripts\Interface\ControlaSeilaOq.cs" />
      <Compile Include="Assets\Scripts\Interface\DesligaAnim.cs" />
      <Compile Include="Assets\Scripts\Interface\DesligaOP.cs" />
@@ -102,7 +108,6 @@
      <Compile Include="Assets\Scripts\UnityAnalyticsIntegration.cs" />
      <Compile Include="Assets\Sprite Test\AnimatedSprite.cs" />
      <Compile Include="Assets\Sprite Test\AnimatedSprite_test.cs" />
-     <Compile Include="Assets\elderSound.cs" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\drawable\common_signin_btn_icon_light.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sw\common_strings.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
@@ -111,12 +116,14 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-pt-rBR\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sl\common_strings.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\Shader\Sprites-Default-Mask.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-et-rEE\common_strings.xml" />
      <None Include="Assets\Textured Text Shader.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\README.txt" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-eu-rES\common_strings.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\drawable\common_signin_btn_text_light.xml" />
+     <None Include="Assets\Read\README.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-is-rIS\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-nl\common_strings.xml" />
@@ -158,6 +165,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset3.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\FisheyeShader.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\proguard.txt" />
+     <None Include="Assets\Editor\Todo\README.txt" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ka-rGE\common_strings.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-zh-rCN\common_strings.xml" />
@@ -206,6 +214,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionSelective.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
+     <None Include="Assets\Shader\Textured Text Shader.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CameraMotionBlurDX11.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-uk\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ta-rIN\common_strings.xml" />
@@ -274,13 +283,13 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\color\wallet_secondary_text_holo_dark.xml" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.5/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.7/Standalone/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Cloud.Analytics">
- <HintPath>C:/Users/Pedro/Documents/DagonGames/super-flappy-cthulhu-ios/Assets/Plugins/UnityEngine.Cloud.Analytics.dll</HintPath>
+ <HintPath>C:/Users/Gabriel/Documents/GitHub/super-flappy-cthulhu-ios/Assets/Plugins/UnityEngine.Cloud.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Cloud.Analytics.Util">
- <HintPath>C:/Users/Pedro/Documents/DagonGames/super-flappy-cthulhu-ios/Assets/Plugins/UnityEngine.Cloud.Analytics.Util.dll</HintPath>
+ <HintPath>C:/Users/Gabriel/Documents/GitHub/super-flappy-cthulhu-ios/Assets/Plugins/UnityEngine.Cloud.Analytics.Util.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
