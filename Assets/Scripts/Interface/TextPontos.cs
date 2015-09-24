@@ -31,7 +31,7 @@ public class TextPontos : MonoBehaviour
 			AudioSource.PlayClipAtPoint(bate, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			audios.Stop();
 			pon = PlayerJump.player.pontos;
-			Social.ReportScore(PlayerPrefs.GetInt("flappyS"), "ponto", (bool success) => {
+			Social.ReportScore(PlayerPrefs.GetInt("flappyS"), "pontoFree", (bool success) => {
 				
 			});
 		}
@@ -40,7 +40,7 @@ public class TextPontos : MonoBehaviour
 			AudioSource.PlayClipAtPoint(bate, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			audios.Stop();
 			pon = PlayerJump.player.pontos;
-			Social.ReportScore(PlayerPrefs.GetInt("flappyS"), "ponto", (bool success) => {
+			Social.ReportScore(PlayerPrefs.GetInt("flappyS"), "pontoFree", (bool success) => {
 				
 			});
 		}
