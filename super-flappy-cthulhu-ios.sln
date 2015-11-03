@@ -1,17 +1,11 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{8B2DE758-C540-5272-0C6A-8C7562882940}") = "super-flappy-cthulhu-ios", "Assembly-CSharp-firstpass.csproj", "{73FD2123-6AC9-D287-9AD7-86E05D01C09A}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "super-flappy-cthulhu-ios.CSharp.Plugins", "super-flappy-cthulhu-ios.CSharp.Plugins.csproj", "{A48E0BB0-A2B0-EEF6-01E0-1997FB2C97EC}"
 EndProject
-Project("{8B2DE758-C540-5272-0C6A-8C7562882940}") = "super-flappy-cthulhu-ios", "Assembly-CSharp.csproj", "{AD106116-5870-BDAE-A60E-192751F50818}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "super-flappy-cthulhu-ios.CSharp", "super-flappy-cthulhu-ios.CSharp.csproj", "{1B208C2D-60F4-87EE-DF34-0B8F553A61F0}"
 EndProject
-Project("{8B2DE758-C540-5272-0C6A-8C7562882940}") = "super-flappy-cthulhu-ios", "Assembly-CSharp-Editor.csproj", "{DCC2F4E5-C1F4-25CD-5681-B3DD89536FFF}"
-EndProject
-Project("{8B2DE758-C540-5272-0C6A-8C7562882940}") = "super-flappy-cthulhu-ios", "Assembly-UnityScript-firstpass.unityproj", "{11F81BE4-E973-CF02-1196-3AB8325EABFE}"
-EndProject
-Project("{8B2DE758-C540-5272-0C6A-8C7562882940}") = "super-flappy-cthulhu-ios", "Assembly-UnityScript.unityproj", "{D5F543E9-13BB-24F8-4802-AEC89BFB3B6D}"
-EndProject
-Project("{8B2DE758-C540-5272-0C6A-8C7562882940}") = "super-flappy-cthulhu-ios", "Assembly-UnityScript-Editor.unityproj", "{9FDDF945-5EC1-A513-F719-627BC7A94758}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "super-flappy-cthulhu-ios.CSharp.Editor", "super-flappy-cthulhu-ios.CSharp.Editor.csproj", "{E892981A-BA2A-06C6-ED0C-FCE48DD15FA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,52 +13,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{73FD2123-6AC9-D287-9AD7-86E05D01C09A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73FD2123-6AC9-D287-9AD7-86E05D01C09A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73FD2123-6AC9-D287-9AD7-86E05D01C09A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73FD2123-6AC9-D287-9AD7-86E05D01C09A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AD106116-5870-BDAE-A60E-192751F50818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD106116-5870-BDAE-A60E-192751F50818}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD106116-5870-BDAE-A60E-192751F50818}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD106116-5870-BDAE-A60E-192751F50818}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DCC2F4E5-C1F4-25CD-5681-B3DD89536FFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DCC2F4E5-C1F4-25CD-5681-B3DD89536FFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DCC2F4E5-C1F4-25CD-5681-B3DD89536FFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DCC2F4E5-C1F4-25CD-5681-B3DD89536FFF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{11F81BE4-E973-CF02-1196-3AB8325EABFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11F81BE4-E973-CF02-1196-3AB8325EABFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11F81BE4-E973-CF02-1196-3AB8325EABFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11F81BE4-E973-CF02-1196-3AB8325EABFE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D5F543E9-13BB-24F8-4802-AEC89BFB3B6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5F543E9-13BB-24F8-4802-AEC89BFB3B6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5F543E9-13BB-24F8-4802-AEC89BFB3B6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5F543E9-13BB-24F8-4802-AEC89BFB3B6D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9FDDF945-5EC1-A513-F719-627BC7A94758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9FDDF945-5EC1-A513-F719-627BC7A94758}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9FDDF945-5EC1-A513-F719-627BC7A94758}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9FDDF945-5EC1-A513-F719-627BC7A94758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A48E0BB0-A2B0-EEF6-01E0-1997FB2C97EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48E0BB0-A2B0-EEF6-01E0-1997FB2C97EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A48E0BB0-A2B0-EEF6-01E0-1997FB2C97EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A48E0BB0-A2B0-EEF6-01E0-1997FB2C97EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B208C2D-60F4-87EE-DF34-0B8F553A61F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B208C2D-60F4-87EE-DF34-0B8F553A61F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B208C2D-60F4-87EE-DF34-0B8F553A61F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B208C2D-60F4-87EE-DF34-0B8F553A61F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E892981A-BA2A-06C6-ED0C-FCE48DD15FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E892981A-BA2A-06C6-ED0C-FCE48DD15FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E892981A-BA2A-06C6-ED0C-FCE48DD15FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E892981A-BA2A-06C6-ED0C-FCE48DD15FA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-						GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
-		Policies = $0
-		$0.TextStylePolicy = $1
-		$1.inheritsSet = null
-		$1.scope = text/x-csharp
-		$0.CSharpFormattingPolicy = $2
-		$2.inheritsSet = Mono
-		$2.inheritsScope = text/x-csharp
-		$2.scope = text/x-csharp
-		$0.TextStylePolicy = $3
-		$3.FileWidth = 120
-		$3.TabWidth = 4
-		$3.IndentWidth = 4
-		$3.EolMarker = Unix
-		$3.inheritsSet = Mono
-		$3.inheritsScope = text/plain
-		$3.scope = text/plain
-	EndGlobalSection
-
 EndGlobal
